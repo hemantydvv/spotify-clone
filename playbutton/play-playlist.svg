@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="28"
+     height="28"
+     viewBox="0 0 24 24">
+
+  <!-- green circular background -->
+  <circle cx="12" cy="12" r="10" fill=""/>
+
+  <!-- single black outer ring -->
+  <circle cx="12" cy="12" r="10" fill="#00ff00" stroke="" stroke-width=""/>
+
+  <!-- black play icon -->
+  <polygon points="10,8 16,12 10,16" fill="white"/>
+
+</svg>

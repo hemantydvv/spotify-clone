@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+:root{
+    --a:0;
+}
+
+body {
+    /* background-color: black; */
+}
+
+.left {
+    width: 25vw;
+    padding: 10px;
+    margin: 5px;
+     max-height: 100%
+}
+
+.right {
+    width: 75vw;
+    margin: 16px 0px;
+    position: sticky;
+    overflow: auto;
+}
+
+.home ul li {
+    display: flex;
+    gap: 15px;
+    padding: 14px;
+    width: 20px;
+}
+
+.logo img {
+    width: 110px;
+}
+
+.home {
+    min-height: 10vh;
+}
+
+.heading {
+    display: flex;
+    gap: 15px;
+    padding: 14px;
+    width: 100%;
+    font-size: 13px;
+}
+
+.footer {
+    display: flex;
+    font-size: 10px;
+    position: absolute;
+    bottom: 0px;
+    padding: 10px;
+}
+
+.footer a {
+    color: gray;
+}
+
+.right {
+    margin: 16px 0px;
+    max-height: 100vh;
+}
+
+.library {
+    min-height: 80vh;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header>* {
+    padding: 20px;
+}
+
+.spotifyplaylist {
+    padding: 16px;
+}
+
+.cardContainer {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 16px;
+    max-height: 60vh;
+}
+
+.card {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #444444;
+     padding-top: 5px;
+    position: relative;
+   
+}
+
+.card:hover{
+    background-color: rgb(110, 110, 110);
+    cursor: pointer;
+      transition: all .5s;
+      --a:1;
+   
+}
+.card img {
+    width: 100%;
+    object-fit: contain;
+}
+
+
+
+.play {
+    width: 28px;
+    height: 28;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    /* background-color: #00ff00; */
+    color: rgb(255, 255, 255);
+    top: 168px;
+    right: 17px;
+    border-radius: 50px;
+    opacity: var(--a);
+    transition: all .5s ease;
+}
+
+.Signupbtn {
+    color: white;
+    border: none;
+    outline: none;
+    background-color: rgb(34, 34, 34);
+}
+
+.Signupbtn:hover {
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.Loginbtn {
+    color: black;
+    background-color: white;
+    border-radius: 21px;
+    padding: 5px;
+    outline: none;
+    border: none;
+    width: 65px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.Loginbtn:hover {
+    color: black;
+    background-color: white;
+    border-radius: 21px;
+    font-weight: bold;
+    padding: 5px;
+    outline: none;
+    border: none;
+    width: 66px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.container {
+    box-sizing: border-box;
+    object-fit: contain;
+    height: fit-content;
+}
+
+.playbar {
+    height: 100px;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    width: 70%;
+    padding: 3px;
+    color: #e11717;
+    background-color: #a5a5a5;
+    border-radius: 9px;
+}
+
+.songbutton {
+    display: flex;
+    justify-content: center;
+  padding: 28px;
+}
+
+.songbutton img {
+    width: 50px;
+}
+
+.songList ul {
+    padding: 0 10px;
+}
+
+.songList ul li {
+    list-style: none;
+    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 12 0px;
+    border: 1px solid white;
+    margin: 7px;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.playNow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playNow {
+    width: 150px;
+    font-size: 10px;
+    padding: 10px;
+}
+
+.info div {
+    padding-top: 5px;
+    font-size: 14px;
+}
+
+.songList .info {
+    font-size: 14px;
+    width: 344px;
+}
+.info div{
+    word-break: break-all;
+}
+
+.songList {
+    height: 470px;
+    overflow: scroll;
+    margin-bottom: 44px;
+}
+
+.cardContainer {
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+
+/* ── Only these two rules were changed ──────────────────────────────── */
+/* ... your existing CSS remains the same until seekbar ... */
+
+/* ── NEW SEEK RANGE STYLES (Spotify-like) ───────────────────────────── */
+.seek-container {
+    bottom: 32px;
+    width: 98%;
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+
+}
+
+.seek-range {
+    width: 100%;
+    accent-color: rgb(253 0 255);           /* Spotify green */
+    background: #535353;
+    height: 4px;
+    border-radius: 999px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Make thumb bigger & nicer */
+.seek-range::-webkit-slider-thumb {
+    appearance: none;
+    height: 12px;
+    width: 12px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    cursor: pointer;
+    margin-top: -4px;
+}
+
+.seek-range::-moz-range-thumb {
+    height: 12px;
+    width: 12px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Hide old circle styles */
+.seekbar .circle { display: none; }   /* just in case */
+
+/* Volume layout fix */
+.volume {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.volume img {
+    width: 28px;
+    cursor: pointer;
+}
+
+.volume .range {
+    width: 100px;
+    accent-color: #1ed760;
+}
+
+/* Rest of your CSS remains unchanged */
+
+.hamburger {
+    display: none;
+       width: 42px;
+    height: 42px;
+
+
+}
+.close {
+    display: none;
+}
+.hamburgerCont {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+
+.spotifyplaylist{
+    /* height: ; */
+}
+/* ────────────────────────────────────────────────────────────────────── */
+
+.bar-info {
+    position: absolute;
+    justify-content: space-between;
+}
+
+.bar-songinfo {
+    position: fixed;
+    left: 10px;
+    max-width: 50%;
+}
+
+.songtime {
+    position: fixed;
+    right: 10px;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.volume{
+    position: absolute;
+    right: 20px;
+    top: 20px;display: flex;
+align-items: center;
+
+    
+}
+.volume img{
+    width: 35px;
+cursor: pointer;
+}
+
+.volume .range{
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    .left {
+       background: #000;
+        position: fixed;
+        left: -120%;
+        transition: all .3s;
+        z-index: 1;
+        width: 373px;
+  height: 100vh;
+  overflow: auto;
+    }
+    
+    .cardContainer {
+    box-sizing: border-box;
+    overflow: auto;
+        display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 16px;
+
+}
+.border {
+    border: 2px solid rgb(255, 255, 255);
+    margin: 3px;
+}
+.card {
+    padding-top: 5px;
+    position: relative;
+}
+
+    .card img {
+   max-width: 100%;
+    object-fit: contain;
+}
+
+    .right {
+        width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    margin: 0;
+    }
+
+    .playbar {
+        width: 95vw;
+        min-height: 120px;
+        position: fixed;
+        right: 2.5%;
+        
+    }
+    .songbutton{
+            position: relative;
+            top: 18px;
+        }
+        .seekbar{
+            top: 22px;
+        }
+    .bar-info{
+
+    }
+
+    .hamburger {
+        display: block;
+    }
+    .close{
+         display: block;
+    }
+    .card{
+        width: 90vw;
+    }
+    .cardContainer{
+        margin: 0;
+        justify-content: center;
+        max-height: 100%;
+    }
+    .volume{
+    position: absolute;
+    right: 20px;
+    top: 60px;    
+}
+.volume img{
+    width: 25px;
+}
+.range{
+max-width:80px;
+}
+.footer{
+    height: 6vh;
+}
+
+.play {
+    width: 50px;
+    height: 28;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    /* background-color: #00ff00; */
+    color: rgb(255, 255, 255);
+    right: 21px;
+    border-radius: 50px;
+    bottom: 6px;
+    opacity: 1;
+    transition: all .5s ease;
+}
+
+.seek-container {
+           bottom: 10px;
+
+    width: 98%;
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+
+}
+.seek-range {
+    width: 100%;
+    accent-color: rgb(253 0 255);
+    background: #535353;
+    height: 10px;
+    border-radius: 999px;
+    cursor: pointer;
+    outline: none;
+}
+
+
+
+
+
+
+
+
+}
+/* Hide scrollbar but keep scrolling functionality */
+
+/* For Chrome, Safari, Edge (new), Opera */
+.songList::-webkit-scrollbar {
+    display: none;
+}
+
+/* For Firefox */
+.songList {
+    scrollbar-width: none;          /* hides scrollbar completely */
+    -ms-overflow-style: none;       /* IE + old Edge */
+}
+
+/* Optional: if you also want to hide it on the whole page or other scrollable areas */
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+.left .close{
+    position: absolute;
+    right: 31px;
+    top: 25px;
+    width: 29px;
+    cursor: pointer;
+
+}

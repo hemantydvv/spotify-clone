@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+</head>
+<body>
+    <div class="container flex bg-black">
+        <div class="left">
+            <div class="close">
+                <img class="pointer" src="playbutton/close.svg" alt="">
+            </div>
+            <div class="home bg-gray rounded m-1 p-1">
+                <div class="logo">
+                    <img class="invert" src="img/logo.svg" alt="">
+                </div>
+                <ul>
+                    <li><img class="invert" src="img/home.svg" alt="home">Home</li>
+                    <li><img class="invert" src="img/search.svg" alt="search">Search</li>
+                </ul>
+            </div>
+            <div class="library bg-gray rounded m-1 p-1">
+                <div class="heading">
+                    <img src="img/playlist.svg" alt="playlist">
+                    <h2>Your Library</h2>
+                </div>
+                <div class="songList">
+                    <ul>
+                        <!-- JS will fill this -->
+                    </ul>
+                </div>
+                <div class="footer">
+                    <div><a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/privacy/"><span>Privacy Center</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/"><span>Privacy Policy</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/cookies-policy/"><span>Cookies</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/#s"><span>About Ads</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/accessibility/"><span>Accessibility</span></a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="header bg-gray rounded m-1">
+                <div class="nav">
+                    <div class="hamburgerCont">
+                        <img class="hamburger" src="playbutton/hamburger.svg" alt="">
+                        <img src="img/arrow_back_ios_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                        <img src="img/arrow_forward_ios_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                    </div>
+                </div>
+                <div class="button">
+                    <button class="Signupbtn">Sign up</button>
+                    <button class="Loginbtn">Log in</button>
+                </div>
+            </div>
+
+            <h1>Spotify Playlist</h1>
+            <div class="spotifyplaylist">
+                <div class="cards">
+                    <!-- CARD 1 - GURU RANDHAWA -->
+                    <div class="cardContainer" data-folder="guru-randhawa">
+                        <div class="card border">
+                            <div class="play">
+                                <img class="pointer" src="playbutton/play-playlist.svg" alt="">
+                            </div>
+                            <img src="img/guru.jpg" alt="">
+                            <h2>Guru Randhawa</h2>
+                            <p>Best Punjabi Hits</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 - KARAN AUJLA -->
+                    <div class="cardContainer" data-folder="karan ahujla">
+                        <div class="card border">
+                            <div class="play">
+                                <img class="pointer" src="playbutton/play-playlist.svg" alt="">
+                            </div>
+                            <img src="img/karan.jpg" alt="">
+                            <h2>Karan Aujla</h2>
+                            <p>Latest Hits</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 - NO COPYRIGHT VIBES -->
+                    <div class="cardContainer" data-folder="no-copyright-vibes">
+                        <div class="card border">
+                            <div class="play">
+                                <img class="pointer" src="playbutton/play-playlist.svg" alt="">
+                            </div>
+                            <img src="img/no-copy.jpg" alt="">
+                            <h2>No Copyright Vibes</h2>
+                            <p>Royalty Free Music</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOTTOM PLAYER BAR -->
+                <div class="playbar invert">
+                    <div class="bar-info flex">
+                        <div class="bar-songinfo"></div>
+                        <div class="songtime">0:00 / 0:00</div>
+                    </div>
+
+                    <div class="songbutton">
+                        <img class="pointer" id="previous" src="playbutton/prevsong.svg" alt="prev">
+                        <img class="pointer" id="play" src="playbutton/play.svg" alt="play">
+                        <img class="pointer" id="next" src="playbutton/nextsong.svg" alt="next">
+                    </div>
+
+                    <div class="seek-container">
+                        <input type="range" id="seek" class="seek-range" min="0" max="100" value="0">
+                    </div>
+
+                    <div class="volume invert pointer">
+                        <img id="volumeIcon" src="playbutton/volume.svg" alt="volume">
+                        <input type="range" class="range" min="0" max="100" value="75">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
